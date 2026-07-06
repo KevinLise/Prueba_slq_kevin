@@ -1,0 +1,16 @@
+services:
+  database:
+    image: postgres:16-alpine
+    container_name: kevinbrujo2
+    restart: always
+    environment:
+      POSTGRES_USER: Kevin_Andres_Escorcia_Salgado
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: micaela
+    ports:
+      - "5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
